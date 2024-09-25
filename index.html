@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Management</title>
+</head>
+<body>
+  <h1>Event Management System</h1>
+  <form id="loginForm">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+    <button type="submit">Login</button>
+  </form>
 
+  <script>
+    // Handle the login form submission
+    const loginForm = document.getElementById("loginForm");
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault(); // Prevent the default form submission
+      // Here, you would add your authentication logic (e.g., check against a database or a simple list of users)
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Placeholder for authentication logic
+      if (username === "user" && password === "password") {
+        // Redirect to the events page
+        window.location.href = "events.html";
+      } else {
+        alert("Invalid username or password");
+      }
+    });
+  </script>
+</body>
+</html>
